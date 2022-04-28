@@ -14,6 +14,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
 app.set('layout', 'layouts/main')
 
+app.use((req, res, next) =>{
+	res.setHeader(
+		"Content-Security-Policy", 
+		"default-src 'self' makamuta.com *.makamuta.com *.ngrok.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' https://cdn.jsdelivr.net; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com"
+		)
+	next()
+})
+
 app.use('/', router)
 
 const port = process.env.PORT || 4040
