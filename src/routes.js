@@ -2,15 +2,23 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+const toMain = (req, res, next) => {
+	if(req.headers.host.search(/^www/) !== -1){
+		res.set('Location', 'https://makamuta.com'+req.originalUrl)
+		res.status(301).send()
+	}
+	next()
+}
+
+router.get('/', toMain, (req, res) => {
 	res.redirect('/windfall')
 })
 
-router.get('/windfall', (req, res) => {
+router.get('/windfall',  toMain, (req, res) => {
 	res.render('pages/windfall', {title: "Windfall - Voucher Discounts | Makamuta"})
 })
 
-router.get('/windfall/privacy-policy', (req, res) => {
+router.get('/windfall/privacy-policy', toMain, (req, res) => {
 	res.render('pages/windfall-privacy', {title: "Privacy policy - Windfall | Makamuta"})
 })
 
