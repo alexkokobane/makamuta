@@ -11,7 +11,7 @@ const toMain = (req, res, next) => {
 }
 
 router.get('/', toMain, (req, res) => {
-	res.redirect('/windfall')
+	res.render('pages/home', {title: "Makamuta - Shopify apps for conversion"})
 })
 
 router.get('/windfall',  toMain, (req, res) => {
