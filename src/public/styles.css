@@ -80,6 +80,11 @@ input, select {
 	vertical-align:middle;
 }
 
+hr {
+	border: 0.1em solid var(--c-saturate);
+	width: 100%;
+}
+
 img {
 	object-fit: cover;
 	object-position: center;
@@ -96,6 +101,7 @@ header {
 	--c-alt-text: #EEEEEE;
 	--c-border:  #B20600;
 	--c-alt-border: #066163;
+	--c-saturate: #FF5F00;
 }
 
 /* components */
@@ -209,8 +215,8 @@ header {
 	padding: 0.25em 1em 0.25em 1em;
 	font-size: 1.3em;
 	font-weight: 600;
-	background: var(--bg-global);
-	color: var(--c-main-text);
+	background: var(--c-saturate);
+	color: var(--c-alt-text);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -265,6 +271,23 @@ header {
 	display: flex;
 	flex-direction: column;
 	row-gap: 1em;
+}
+
+.mini-glow {
+	box-shadow: -3px 2px 24px 0px var(--c-saturate);
+	-webkit-box-shadow: -3px 2px 24px 0px var(--c-saturate);
+	-moz-box-shadow: -3px 2px 24px 0px var(--c-saturate);
+	border: 1px solid transparent;
+	border-radius: 0.75rem;
+}
+
+.mini-glow--withPadding {
+	padding: 1em;
+	box-shadow: -3px 2px 24px 0px var(--c-saturate);
+	-webkit-box-shadow: -3px 2px 24px 0px var(--c-saturate);
+	-moz-box-shadow: -3px 2px 24px 0px var(--c-saturate);
+	border: 1px solid transparent;
+	border-radius: 0.75rem;
 }
 
 .mini-row {
