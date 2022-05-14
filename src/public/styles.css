@@ -296,6 +296,10 @@ header {
 	column-gap: 1em;
 }
 
+.mini-tight {
+	padding: 0.5em 1.5em 0.5em 1.5em;
+}
+
 .sizer {
 	display: flex;
 	flex-wrap: wrap;
@@ -338,6 +342,9 @@ header {
 	}
 	.container {
 		padding: 2em 10em 2em 10em;
+	}
+	.mini-tight {
+		padding: 0.8em 3em 0.8em 3em;
 	}
 }
 
