@@ -179,7 +179,7 @@ header {
 }
 
 .heading-l {
-	font-size: 3em;
+	font-size: 3.5em;
 	font-weight: 900;
 	line-height: 1.2;
 	text-align: center;
@@ -206,6 +206,10 @@ header {
 .image-square--small {
 	width: 4em;
 	height: 4em;
+}
+
+.image-screenshot {
+	width: 12em;
 }
 
 .link-button {
