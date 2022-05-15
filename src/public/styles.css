@@ -81,8 +81,10 @@ input, select {
 }
 
 hr {
-	border: 0.1em solid var(--c-saturate);
+	border: 0.2em solid var(--c-border);
 	width: 100%;
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
 }
 
 img {
@@ -209,7 +211,19 @@ header {
 }
 
 .image-screenshot {
-	width: 12em;
+	width: 100%;
+}
+
+.lean-section {
+	background: var(--bg-global);
+	color: var(--c-main-text);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lean-container {
+	flex: 1 1 45%; /* No stretching: */
+	margin: 1em;
 }
 
 .link-button {
@@ -268,7 +282,12 @@ header {
 
 .mini-between {
 	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
+}
+
+.mini-border {
+	border: 0.3em solid var(--c-saturate);
+	border-radius: 0.75rem;
 }
 
 .mini-column {
