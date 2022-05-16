@@ -11,11 +11,11 @@ const toMain = (req, res, next) => {
 }
 
 router.get('/', toMain, (req, res) => {
-	res.render('pages/home', {title: "Makamuta - Shopify apps for conversion"})
+	res.redirect('/windfall')
 })
 
 router.get('/windfall',  toMain, (req, res) => {
-	res.render('pages/windfall', {title: "Windfall - Voucher Discounts | Makamuta"})
+	res.render('pages/home', {title: "Windfall - Voucher Discounts | Makamuta"})
 })
 
 router.get('/windfall/privacy-policy', toMain, (req, res) => {
