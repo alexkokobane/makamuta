@@ -17,7 +17,7 @@ app.set('layout', 'layouts/main')
 app.use((req, res, next) =>{
 	res.setHeader(
 		"Content-Security-Policy", 
-		"default-src 'self' makamuta.com *.makamuta.com *.ngrok.io; style-src 'self' 'unsafe-inline' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com; script-src 'self' https://cdn.jsdelivr.net; font-src 'self' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com https://fonts.gstatic.com"
+		"default-src 'self' makamuta.com *.makamuta.com *.ngrok.io; style-src 'self' 'unsafe-inline' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com; script-src 'self' https://cdn.jsdelivr.net https://www.googletagmanager.com; font-src 'self' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com https://fonts.gstatic.com"
 		)
 	next()
 })
