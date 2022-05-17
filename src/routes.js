@@ -15,11 +15,17 @@ router.get('/', toMain, (req, res) => {
 })
 
 router.get('/windfall',  toMain, (req, res) => {
-	res.render('pages/home', {title: "Windfall - Voucher Discounts | Makamuta"})
+	res.render('pages/home', {
+		title: "Windfall - Voucher Discounts | Makamuta",
+		description: "An app for creating goal driven extensive giveaways on your Shopify store."
+	})
 })
 
 router.get('/windfall/privacy-policy', toMain, (req, res) => {
-	res.render('pages/windfall-privacy', {title: "Privacy policy - Windfall | Makamuta"})
+	res.render('pages/windfall-privacy', {
+		title: "Privacy policy - Windfall | Makamuta",
+		description: "The privacy policy of the Windfall."
+	})
 })
 
 module.exports = router
