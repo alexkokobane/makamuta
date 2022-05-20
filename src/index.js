@@ -17,7 +17,7 @@ app.set('layout', 'layouts/main')
 app.use((req, res, next) =>{
 	res.setHeader(
 		"Content-Security-Policy", 
-		"default-src 'self' makamuta.com *.makamuta.com *.ngrok.io; connect-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com; script-src 'self' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com https://fonts.gstatic.com"
+		"default-src 'self' makamuta.com *.makamuta.com *.ngrok.io; connect-src 'self' https://www.google-analytics.com wss://client.relay.crisp.chat https://storage.crisp.chat https://client.crisp.chat; style-src 'self' 'unsafe-inline' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com https://client.crisp.chat; script-src 'self' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://client.crisp.chat; font-src 'self' https://cdn.fontshare.com https://api.fontshare.com https://fonts.googleapis.com https://fonts.gstatic.com https://client.crisp.chat; img-src 'self' data: https://client.crisp.chat https://image.crisp.chat https://storage.crisp.chat; media-src https://client.crisp.chat; frame-src 'self' https://game.crisp.chat;"
 		)
 	next()
 })
